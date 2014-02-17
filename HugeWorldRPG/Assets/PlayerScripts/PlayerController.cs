@@ -63,6 +63,10 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton ("Jump")) 	{
 			verticalVelocity = jumpSpeed;
 			}
+		//Attack Animation
+		if (Input.GetMouseButton(0))	{
+			
+			}
 		}
 	}
 }
