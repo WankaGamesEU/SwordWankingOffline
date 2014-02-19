@@ -54,28 +54,22 @@ public class PlayerController : MonoBehaviour {
 
 
 
-
+		// Check if character is grounded
 		if (cc.isGrounded)  {
-
 		//Jump
-		
-		if (Input.GetButton ("Jump")) 	{
-			verticalVelocity = jumpSpeed;
-			}
-			
+			if (Input.GetButton ("Jump")) 	{
+				verticalVelocity = jumpSpeed;
+				}
+		}
+
 		//Attack Animation
 		if (Input.GetMouseButton(0))	{
-			try{
-				if(animationData != null){
-					animation.CrossFade (animationData)
-				}
-			}
-			catch (Exeption e){
-				throw new Exeption(e.ToString());
-			}
+		
+		
+			
 		}
-		else{
-			animation.CrossFade ("idle")	
-		}	
+
+
+
 	}
 }
