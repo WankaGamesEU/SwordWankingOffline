@@ -1,5 +1,4 @@
 
-
 using UnityEngine;
 using System.Collections;
 
@@ -11,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 	float verticalRotation = 0;
 	public float verticalVelocity = 0;
 	public float jumpSpeed = 5f;
+	public string animationData;
 
 	// Use this for initialization
 	void Start ()
@@ -63,10 +63,20 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton ("Jump")) 	{
 			verticalVelocity = jumpSpeed;
 			}
+			
 		//Attack Animation
 		if (Input.GetMouseButton(0))	{
-			
+			try{
+				if(animationData != null){
+					animation.CrossFade ("Animation Here")
+				}
+			}
+			catch (Exeption e){
+				throw new Exeption(e.ToString());
 			}
 		}
+		else{
+			animation.CrossFade ("idle")	
+		}	
 	}
 }
