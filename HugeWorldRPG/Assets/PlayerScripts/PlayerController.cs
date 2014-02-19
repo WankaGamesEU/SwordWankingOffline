@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using System.Collections;
 
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetMouseButton(0))	{
 			try{
 				if(animationData != null){
-					animation.CrossFade ("Animation Here")
+					animation.CrossFade (animationData)
 				}
 			}
 			catch (Exeption e){
