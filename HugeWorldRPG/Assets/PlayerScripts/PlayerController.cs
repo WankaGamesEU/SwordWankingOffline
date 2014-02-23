@@ -2,14 +2,13 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-
+	public GameObject weapon;
 	public float playerMovementSpeed = 5.0f;
 	public float mouseSens = 5.0f;
 	public float rangeUpDown = 70f;
 	float verticalRotation = 0;
 	public float verticalVelocity = 0;
 	public float jumpSpeed = 5f;
-	public string animationData;
 
 	// Use this for initialization
 	void Start ()
@@ -53,23 +52,18 @@ public class PlayerController : MonoBehaviour {
 
 
 
-
 		// Check if character is grounded
 		if (cc.isGrounded)  {
 		//Jump
 			if (Input.GetButton ("Jump")) 	{
 				verticalVelocity = jumpSpeed;
+
 				}
 		}
 
-		//Attack Animation
-		if (Input.GetMouseButton(0))	{
-		
-		
-			
-		}
-
-
-
+	
 	}
+
 }
+	
+

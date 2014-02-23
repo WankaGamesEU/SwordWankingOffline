@@ -46,9 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AnimationKatana.cs" />
      <Compile Include="Assets\PlayerScripts\PlayerController.cs" />
      <Compile Include="Assets\PlayerScripts\Slope.cs" />
      <Compile Include="Assets\Shoot.cs" />
+     <Compile Include="Assets\test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
